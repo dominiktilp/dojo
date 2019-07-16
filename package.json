@@ -1,0 +1,35 @@
+{
+  "name": "dojo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "nodemon --exec babel-node src/index.js",
+    "lint": "eslint ./src/**/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dominiktilp/dojo.git"
+  },
+  "author": "dominik@tilp.cz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dominiktilp/dojo/issues"
+  },
+  "homepage": "https://github.com/dominiktilp/dojo#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.5.0",
+    "@babel/core": "^7.5.4",
+    "@babel/node": "^7.5.0",
+    "@babel/preset-env": "^7.5.4",
+    "babel-jest": "^24.8.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jest": "^22.8.0",
+    "jest": "^24.8.0",
+    "nodemon": "^1.19.1"
+  }
+}
