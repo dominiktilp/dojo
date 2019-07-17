@@ -1,3 +1,3 @@
-import next from './gof/gof';
+import next from './gol/gol';
 
 next([]);
