@@ -20,20 +20,23 @@ export function countNeighbours(x, y, state) {
 }
 
 function next(currentState) {
-  const newState = [];
-  for (let x = 0; x < currentState.length; x += 1) {
-    newState[x] = [];
-    for (let y = 0; y < currentState.length; y += 1) {
-      // iterate over each cell
-      const count = countNeighbours(x, y, currentState);
-      if (count < 2) {
-        newState[x][y] = 0;
-      } else {
-        newState[x][y] = currentState[x][y];
-      }
+    const newState = [];
+    for (let x = 0; x < currentState.length; x += 1) {
+        newState[x] = []
+        for (let y = 0; y < currentState.length; y += 1) {
+            // iterate over each cell
+            const count = countNeighbours(x, y, currentState);
+            if (count < 2   || count > 3 ) {
+                newState[x][y] = 0;
+            } else {
+                newState[x][y] = currentState[x][y];
+            }
+            if(currentState[x][y] === 0 && count === 3 ) {
+                newState[x][y] = 1;
+            }
+        }
     }
-  }
-  return newState;
+    return newState;
 }
 
 export default next;
