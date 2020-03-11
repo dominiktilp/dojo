@@ -1,30 +1,7 @@
-import Game from './gol/game';
+import { giveMeScore } from './golf';
 
-const state = [
-  [0, 0, 0, 1, 1],
-  [0, 0, 1, 0, 0],
-  [0, 1, 0, 0, 1],
-  [0, 0, 0, 0, 1],
-  [0, 0, 0, 0, 1],
-];
+const expectedHits = parseInt(process.argv[2], 10);
+const actualHits = parseInt(process.argv[3], 10);
 
-const game = new Game(state);
-game.next();
-console.log('1', game.getBoard());
-console.log(game.isAlive());
-game.next();
-console.log('2', game.getBoard());
-console.log(game.isAlive());
-game.next();
-console.log('3', game.getBoard());
-console.log(game.isAlive());
-game.next();
-console.log('4', game.getBoard());
-console.log(game.isAlive());
-game.next();
-console.log('5', game.getBoard());
-console.log(game.isAlive());
-game.next();
-console.log('6', game.getBoard());
-console.log(game.isAlive());
-game.next();
+console.log(`Counting score for ${expectedHits}, ${actualHits}`);
+console.log(`Result is ${giveMeScore(expectedHits, actualHits)}`);
