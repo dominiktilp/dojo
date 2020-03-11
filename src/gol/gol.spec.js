@@ -1,5 +1,5 @@
 import next, {
-  countNeighbours
+  countNeighbours,
 } from './gol';
 
 test('gol.next is a function', () => {
